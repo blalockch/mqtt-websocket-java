@@ -33,7 +33,7 @@ public class MqttWebSocketAsyncClient extends MqttAsyncClient {
 	 * @return
 	 */
 	protected static String createDummyURI(String original) {
-		if (!original.startsWith("ws:") && !original.startsWith("wss:")) {
+		if (!original.startsWith("ws:") && !original.startsWith("wss:") && !original.startsWith("https:")) {
 			return original;
 		}
 		final URI uri = URI.create(original);
